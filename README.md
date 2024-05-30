@@ -65,6 +65,7 @@ For example:
 - `results.py`: Contains a class to store the results and functions to compute
   metrics.
 - `split.py`: Utils for split notebooks.
+- `temperature_scaling.py`: Utils for [temperature scaling](https://github.com/gpleiss/temperature_scaling).
 - `trainers.py`: Different HF Trainers and main train function.
 
 - `scripts`: This folder contains bash scripts for [reproducibility](#reproduce).
