@@ -1,6 +1,6 @@
 #  Context-Aware Stereotype Detection Conversational Thread Analysis
 
-This repository contains the code for classification models of racial stereotypes in Spanish corora (StereoHoax-ES and DETESTS), using both hard and soft labels, and taking into account their conversational contexts.
+This repository contains the code for classification models of racial stereotypes in Spanish corora (StereoHoax-ES and DETESTS), taking into account their conversational contexts.
 
 We consider different contexts for the text classification:
 
@@ -30,12 +30,13 @@ For example:
 - [Programs and folder structure](#programs-and-folder-structure)
   - [Main programs](#main-programs)
   - [Utils](#utils)
-- [StereoHoax-ES corpus](#stereohoax-es-corpus)
+- [Datasets](#datasets)
+  - [DETESTS](#detests)
+  - [StereoHoax-ES corpus](#stereohoax-es-corpus)
 - [Results](#results)
 - [Reproduce](#reproduce)
   - [Setup](#setup)
   - [Split](#split)
-  - [Baselines](#baselines)
   - [BERTs Fine-tuning](#berts-fine-tuning)
     - [Hyper-parameters](#hyper-parameters)
   - [Figures](#figures)
@@ -267,14 +268,8 @@ python baselines.py -data detests
 
 To fine-tune the BERT models for both corpora, run the `fine_tuning_hard_and_soft.ipynb` notebook with the adequate inputs.
 
-The BERT models used for these tasks include:
-
-- 'PlanTL-GOB-ES/roberta-base-bne' (RoBERTa-BNE). Trained with data from the
-  [National Library of Spain (Biblioteca Nacional de España)](https://www.bne.es/es).
-- 'dccuchile/bert-base-spanish-wwm-cased' (BETO). Trained with the data
-  specified in https://github.com/josecannete/spanish-corpora.
-- 'pysentimiento/robertuito-base-uncased' (RoBERTuito). Tained with
-  [twitter data](https://arxiv.org/pdf/2111.09453.pdf).
+Although not mentioned in the paper, we used temperature scaling and you can see the implementation.
+Likewise, both hard and soft labels are implemented.
 
 #### Hyper-parameters
 

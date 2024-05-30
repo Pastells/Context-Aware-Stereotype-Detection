@@ -15,7 +15,6 @@ LEGEND_FONTSIZE = 16
 FIG_PARAMS = {
     "text.usetex": shutil.which("latex") is not None,  # check if latex is installed
     "font.size": 10,
-    # "font.family": "Helvetica",  # LREC
     "font.family": "serif",
     "font.serif": "Computer Modern",
     "figure.dpi": DPI,
