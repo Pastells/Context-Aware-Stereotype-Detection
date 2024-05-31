@@ -243,6 +243,7 @@ Test = {
     'EC20210829': 0.03,
     'sum':        0.32,
 }
+```
 
 ### Baselines
 
@@ -279,12 +280,3 @@ The models with hard labels uses a learning rate of 2e-5, while the model with
 soft-labels uses 1e-5.
 
 We keep the model with lowest loss.
-
-### Figures
-
-To create all the figures run:
-
-```bash
-python create_metrics.py
-python create_figures.py
-```
