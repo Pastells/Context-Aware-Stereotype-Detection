@@ -93,11 +93,9 @@ def barplot(
     for i, thisbar in enumerate(bar.patches):
         thisbar.set_hatch(hatches[i])
 
-    # print(data)
     for i, xi in enumerate(xs):
         for j, yi in enumerate(hues):
             row = data[(data[x] == xi) & (data[hue] == yi)].iloc[0]
-            # print(row)
             ax.errorbar(
                 x=-0.5 + (j + 1) * bar_width + i * space_width,
                 y=row[y],
@@ -108,11 +106,19 @@ def barplot(
                 elinewidth=2,
             )
             if ttest and row["pvalue"] < 0.05:
+                arrow = "↑" if row["ttest"] > 0 else "↓"
                 ax.text(
-                    x=-0.54 + (j + 1) * bar_width + i * space_width,
+                    x=-0.57 + (j + 1) * bar_width + i * space_width,
                     y=ymax(row) + 0.02,
-                    s="↑" if row["ttest"] > 0 else "↓",
-                    fontsize=15,
+                    s=f"{row[y]:.2f}" + arrow,
+                    fontsize=9,
+                )
+            else:
+                ax.text(
+                    x=-0.57 + (j + 1) * bar_width + i * space_width,
+                    y=ymax(row) + 0.02,
+                    s=f"{row[y]:.2f}",
+                    fontsize=9,
                 )
 
     if legend:
