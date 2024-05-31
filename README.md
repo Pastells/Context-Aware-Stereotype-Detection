@@ -77,7 +77,6 @@ The following notebooks are included:
 - `notebooks/split_detests.ipynb` splits the DETESTS corpus (see [split](#split)).
 - `notebooks/analysis.ipynb` was the notebook used to create the tables
 and figures for the paper, as well as to extract the relevant data to be qualitatively analyzed.
-  [split](#split)).
 - `fine_tuning_hard_and_soft.ipynb`
   has the fine-tuning of the BERT models. It was originally run on free Google Colab with a T4 GPU.
   It was since ported to be used on a local machine.
