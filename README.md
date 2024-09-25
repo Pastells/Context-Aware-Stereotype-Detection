@@ -1,7 +1,9 @@
 #  Context-Aware Stereotype Detection Conversational Thread Analysis on BERT-based Models
 
 
-This repository contains the code for classification models of racial stereotypes in Spanish corora (StereoHoax-ES and DETESTS), taking into account their conversational contexts.
+This repository contains the code for classification models of racial stereotypes in Spanish corpora (StereoHoax-ES and DETESTS), taking into account their conversational contexts.
+
+Both corpora are available in [HuggingFace](https://huggingface.co/datasets/CLiC-UB/DETESTS-Dis).
 
 We consider different contexts for the text classification:
 
