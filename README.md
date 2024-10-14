@@ -1,4 +1,4 @@
-#  Context-Aware Stereotype Detection Conversational Thread Analysis on BERT-based Models
+#  Context-Aware Stereotype Detection Conversational Thread Analysis on BERT-based Models [SEPLN 2024]
 
 
 This repository contains the code for classification models of racial stereotypes in Spanish corpora (StereoHoax-ES and DETESTS), taking into account their conversational contexts.
